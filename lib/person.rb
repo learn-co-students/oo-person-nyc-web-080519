@@ -1,7 +1,6 @@
 # your code goes here
 class Person
-    attr_reader :name
-    attr_writer :happiness, :hygiene
+    attr_reader :name, :happiness, :hygiene
     attr_accessor :bank_account
 
     def initialize(name)
@@ -11,16 +10,16 @@ class Person
         @hygiene = 8
     end
 
-    def happiness
+    def happiness=(points)
+        @happiness = points
         @happiness = 10 if @happiness > 10
         @happiness = 0 if @happiness < 0
-        @happiness
     end
 
-    def hygiene
+    def hygiene=(points)
+        @hygiene = points
         @hygiene = 10 if @hygiene > 10
         @hygiene = 0 if @hygiene < 0
-        @hygiene
     end
 
     def clean?
